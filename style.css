@@ -1,0 +1,240 @@
+*{
+    margin :0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,50, 0.8),rgba(0,0,50, 0.8)), url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form-box{
+    width:90%;
+    max-width: 450px;
+    position: relative;
+    top: 30%;
+    left: 35%;
+    transform: translate (-60%, -60%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: chocolate;
+    position: relative;
+}
+
+.form-box h1::after{
+    content:'';
+    width: 30px;
+    height:4px;
+    border-radius: 3px;
+    background: chocolate;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    background: chocolate;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition:background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 85px;
+}
+
+.btn-field button:hover{
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+.btn-field button:active{
+    transform: scale (1.05);
+}
+.input-grouped {
+    height: 280px;
+}
+
+.header img{
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 3cm;
+}
+
+.header {
+    background-color:beige;
+    padding: 20px 0;
+}
+header h1{
+    text-align: center;
+    color: chocolate;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    margin: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color:chocolate;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color:white;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.icons i{
+    margin-bottom: 0px;
+    color:burlywood;
+    width: 300px;
+}
+
+.pictures img{
+    width: 50vw;
+    height:vh;
+    object-fit:fill;
+    display: block;
+  
+}
+
+.intro{
+    font-family: Arial, Helvetica, sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   text-align: center;
+   background-color: #fff;
+   padding: 30px;
+   border-radius: 8px;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+   margin-bottom: 40px;
+}
+
+.section{
+    text-align: center;
+    font-size: 50px;
+    color:chocolate;
+    padding: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.container1{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.image-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container label{
+    color:#3c00a0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: b;
+}
+
+.image-container button{
+    padding: 10px;
+    background-color: burlywood;
+    border: #fff;
+    cursor: pointer;
+    transition:background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.image-container button:hover{
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+.image-container button:active{
+    transform: scale (1.05);
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color:beige;
+    color:chocolate;
+    margin-top: 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+p{
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!--header section starts-->
+        <header class="header">
+            <h1>MISS COFFEE AND BEAN</h1>
+            <a href="#" class="logo">
+                <img src="images/miss beans logo.png" alt="logo" >
+            </a>
+            <p style="margin-left:0.5cm;"><i>The taste that makes the difference!</i></p>
+            <nav>
+                <ul>
+                    <li><a href="Product_page.html">Products</a></li>
+                    <li><a href="Invoice.html">Invoice</a></li>
+                    <li><a href="about.html">About</a></li>
+    
+                    <div class="icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                   
+                </div>
+                </ul>
+            </nav>
+        </header>
+    <h1 style="text-align: center; color:chocolate"><u>Invoice</u></h1>
+    <div id="invoice-details"></div>
+
+    <div class="cancel-Btn">
+        <button id="cancelBtn">Cancel</button>
+    </div><br>
+
+    <div class="exit-Btn">
+        <button id="exitBtn">Exit</button>
+    </div><br>
+
+    <script>
+        // Gets invoice data from localStorage
+        const invoiceData = JSON.parse(localStorage.getItem('invoiceData'));
+
+        if (invoiceData) {
+            const invoiceDetails = `
+                <h2>Products:</h2>
+                <ul>
+                    ${invoiceData.cartItems.map(item => `
+                        <li>${item.name} - $${item.price} x ${item.cartQuantity}</li>
+                    `).join('')}
+                </ul>
+                <p><strong>Subtotal:</strong> $${invoiceData.subtotal}</p>
+                <p><strong>Tax (15%):</strong> $${invoiceData.tax}</p>
+                <p><strong>Discount:</strong> -$${invoiceData.discount}</p>
+                <p><strong>Total:</strong> $${invoiceData.total}</p>
+            `;
+
+            document.getElementById('invoice-details').innerHTML = invoiceDetails;
+        }
+
+        // Cancel button - clear invoice and return to the product page
+        document.getElementById('cancelBtn').addEventListener('click', () => {
+            localStorage.removeItem('invoiceData');
+            window.location.href = 'Product_page.html';
+        });
+
+        // Exit button to close the invoice page
+        document.getElementById('exitBtn').addEventListener('click', () => {
+            window.close(); 
+        });
+    </script>
+</body>
+</html>
