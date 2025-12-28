@@ -1,41 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login - Miss Coffee And Beans</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/a2e26de198.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0e5d8, #d6b37c);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-box {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .form-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-box h1 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: chocolate;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .input-field {
+            background: #f3f3f3;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            transition: background 0.3s ease;
+        }
+
+        .input-field:hover {
+            background: #e6d6b8;
+        }
+
+        .input-field i {
+            color: chocolate;
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 15px 0;
+            background: transparent;
+            font-size: 1em;
+        }
+
+        .btn-field button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: chocolate;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-field button:hover {
+            background-color: #a0522d;
+            transform: scale(1.05);
+        }
+
+        #error-message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .form-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="form-box">
             <h1>Login</h1>
             <form id="loginform">
-                <div class="input-grouped">
-                    <div class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" id="name" placeholder="Name" required>
-                    </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" id="email" placeholder="example@gmail.com" required>
-                    </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                </div>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="password" placeholder="Password" required>
-                    </div>
-                    
-                    <div class="btn-field">
-                        <button type="submit">Sign in</button>
-                    </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <div class="btn-field">
+                    <button type="submit">Sign In</button>
                 </div>
             </form>
         </div>
         <p id="error-message" style="color: red; display: none;">Invalid credentials. Please try again.</p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
